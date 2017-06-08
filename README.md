@@ -8,7 +8,7 @@ A simple demo to use vscode to invoke cmake and debug c program
 
 In Windows, you can click the check boxes to enable launch in File Explorer
 
-![page](https://drive.google.com/file/d/0Bx0BLlzITKC1YXA5UTNOQWxJT3M/view?usp=sharing)
+![install](images/install.png)
 
 * Install vscode extentions (through vscode left menu)
     * C/C++ for Visual Studio Code
@@ -23,18 +23,26 @@ NOTE:
     In vscode, open File--> Settings, in "WORKSPACE SETTINGS" add the following configuration line to disable
     cmake server.  It should restart vscode to activate the change.
 
+    {
+    ...
+
     "cmake.useCMakeServer": false
+    ...
+    }
 ```
+![build](images/settings.PNG)
+
+
 # Build
 
 Click the cmake region and select the debug option in listed menu.
 
-![build](https://drive.google.com/file/d/0Bx0BLlzITKC1QzF2M29vLVpiclk/view?usp=sharing)
+![build](images/cmake-tools.PNG)
 
 # Debugging
 
 Click the "bug" symbol.
 
-![debug](https://drive.google.com/file/d/0Bx0BLlzITKC1bUFEc18zMHU1dUU/view?usp=sharing)
+![debug](images/cmake-tools-debug.PNG)
 
 
