@@ -41,8 +41,37 @@ Click the cmake region and select the debug option in listed menu.
 
 # Debugging
 
-Click the "bug" symbol.
+Click the "bug" icon.
 
 ![debug](images/cmake-tools-debug.PNG)
 
+While launching the debuging process by click the "bug" icon, (the version of vscode is v1.12.2, CMake Tools 0.9.7), the output message of "printf" function will not showed in the "Debug Console".  No idea it is configuration problem or something else, TBC.
 
+If it is needed to check the output message, it can be achieved by configuration 
+the vscode's launch.json.
+
+![launch](images/launch.PNG)
+
+Click the "wheel" icon and modify the path of execution file.
+
+```
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(Windows) Launch",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/build/test/debug/cmaketest.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": true
+        }
+    ]
+}
+```
+
+While click the '>' icon, the vscode will spawn a external console to show the output
+messages.
